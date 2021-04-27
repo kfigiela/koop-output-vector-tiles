@@ -13,7 +13,7 @@ const useTileSetCache = _.get(config, 'koopOutputVectorTiles.cache', true)
 // Tile response headers
 const responseHeaders = {
   'Content-Type': _.get(config, 'koopOutputVectorTiles.contentType', 'application/x-protobuf'),
-  'Cache-Control': `public, max-age: ${_.get(config, 'koopOutputVectorTiles.maxAge', 3600)}`
+  'Cache-Control': `public, max-age=${_.get(config, 'koopOutputVectorTiles.maxAge', 3600)}`
 }
 
 const tileSetsCache = new TileSetsCache({ ttl: _.get(config, 'koopOutputVectorTiles.cacheExpiration') })
